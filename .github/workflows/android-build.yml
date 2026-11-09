@@ -20,9 +20,7 @@ jobs:
         distribution: 'zulu'
         java-version: '17'
 
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v4
-
+    # Исправляем и перезаписываем проблемный файл jar до любых проверок
     - name: Download and Fix Gradle Wrapper
       run: gradle wrapper --gradle-version 8.5
 
